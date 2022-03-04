@@ -1,4 +1,5 @@
 import * as Yup from 'yup'
+import * as argon2 from 'argon2'
 import User from '../models/User';
 
 class UserController {
@@ -29,13 +30,17 @@ class UserController {
       });
     }
 
+    // Criptografar senha
+    var dados = req.body
+    dados.password = await argon2.hash(dados.password)
+
     // Criar usuario
-    const user = await User.create(req.body, (err) => {
+    const user = await User.create(dados, (err) => {
       if (err)
         return res.status(400).json({
           error: true,
           code: 101,
-          message: 'Error: Usuário não cadastrado',
+          message: 'Error: Usuário não cadastrado' + err,
         });
       return res.status(200).json({
         error: false,
