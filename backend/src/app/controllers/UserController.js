@@ -1,7 +1,9 @@
+import * as Yup from 'yup'
 import User from '../models/User';
 
 class UserController {
   async store(req, res) {
+    // Verificar se o email existe
     const emailExiste = await User.findOne({email: req.body.email})
     if(emailExiste){
       return res.status(400).json({
@@ -11,30 +13,23 @@ class UserController {
       });
     }
 
-    if(!req.body.name || typeof req.body.name == undefined || req.body.name == null){
+    // Yup validacao
+
+    const schema = Yup.object().shape({
+      name: Yup.string().required(),
+      email: Yup.string().email().required(),
+      password: Yup.string().required().min(6)
+    })
+
+    if(!(await schema.isValid(req.body))){
       return res.status(400).json({
         error: true,
         code: 103,
-        message: 'Error: O campo nome deve ser preenchido',
+        message: 'Error: Dados invalidos',
       });
     }
 
-    if(!req.body.email || typeof req.body.email == undefined || req.body.email == null){
-      return res.status(400).json({
-        error: true,
-        code: 104,
-        message: 'Error: O campo email deve ser preenchido',
-      });
-    }
-
-    if(!req.body.password || typeof req.body.password == undefined || req.body.password == null){
-      return res.status(400).json({
-        error: true,
-        code: 105,
-        message: 'Error: O campo senha deve ser preenchido',
-      });
-    }
-
+    // Criar usuario
     const user = await User.create(req.body, (err) => {
       if (err)
         return res.status(400).json({
