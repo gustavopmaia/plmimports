@@ -5,20 +5,41 @@ import mongoose from 'mongoose';
 import User from '../models/User';
 
 class UserController {
+  async index(req, res) {
+    const { page = 1 } = req.query;
+    const { limit = 10 } = req.query;
 
-  async index(req, res){
-    await User.find({}).select('-password').then((users) => {
-      return res.json({
-        error: false,
-        users
+    await User.paginate({}, { select: '_id name email', page, limit })
+      .then((users) => {
+        return res.json({
+          error: false,
+          users,
+        });
       })
-    }).catch((err) => {
-      return res.status(400).json({
-        error: true,
-        code: 106,
-        message: "Error: Não foi possivel executar a solicitação"
+      .catch((err) => {
+        return res.status(400).json({
+          error: true,
+          code: 106,
+          message: 'Error: Não foi possivel executar a solicitação',
+        });
+      });
+  }
+
+  async show(req, res) {
+    User.findOne({ _id: req.params.id }, '-password -__v')
+      .then((user) => {
+        return res.json({
+          error: false,
+          user,
+        });
       })
-    })
+      .catch((err) => {
+        return res.status(400).json({
+          error: true,
+          code: 107,
+          message: 'Error: Usuário não encontrado',
+        });
+      });
   }
 
   async store(req, res) {
@@ -67,6 +88,63 @@ class UserController {
           message: 'Error: Usuário não cadastrado' + err,
         });
       });
+  }
+
+  async update(req, res){
+    const schema = Yup.object().shape({
+      _id: Yup.string().required(),
+      name: Yup.string(),
+      email: Yup.string().email(),
+      password: Yup.string().min(6)
+    })
+
+    if(!(await schema.isValid(req.body))){
+      return res.status(400).json({
+        error: true,
+        code: 108,
+        message: "Error: Dados do formulario invalidos"
+      })
+    }
+
+    const { _id, email } = req.body
+
+    const userExiste = await User.findOne({_id})
+    if(!userExiste){
+      return res.status(400).json({
+        error: true,
+        code: 109,
+        message: "Error: Usuário não encontrado"
+      })
+    }
+
+    if(email != userExiste.email){
+      const emailExiste = await User.findOne({email})
+      if(emailExiste){
+        return res.status(401).json({
+          error: true,
+          code: 110,
+          message: "Error: Este e-mail ja esta cadastrado"
+        })
+      }
+    }
+
+    var dados = req.body
+    if(dados.password){
+      dados.password = await argon2.hash(dados.password)
+    }
+
+    await User.updateOne({_id: dados._id}, dados).then((user) => {
+      return res.json({
+        error: false,
+        message: "Usuário editado com sucesso"
+      })
+    }).catch((err) => {
+      return res.status(400).json({
+        error: true,
+        code: 111,
+        message: "Error: Usuário não editado"
+      })
+    })
   }
 
   async delete(req, res) {
