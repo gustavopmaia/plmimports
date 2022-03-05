@@ -5,6 +5,22 @@ import mongoose from 'mongoose';
 import User from '../models/User';
 
 class UserController {
+
+  async index(req, res){
+    await User.find({}).select('-password').then((users) => {
+      return res.json({
+        error: false,
+        users
+      })
+    }).catch((err) => {
+      return res.status(400).json({
+        error: true,
+        code: 106,
+        message: "Error: Não foi possivel executar a solicitação"
+      })
+    })
+  }
+
   async store(req, res) {
     // Verificar se o email existe
     const emailExiste = await User.findOne({ email: req.body.email });
@@ -12,7 +28,7 @@ class UserController {
       return res.status(400).json({
         error: true,
         code: 102,
-        message: 'Error: Email ja existe3',
+        message: 'Error: Email ja existe',
       });
     }
 
