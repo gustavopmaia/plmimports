@@ -1,5 +1,8 @@
 import * as argon2 from 'argon2'
+import jwt from 'jsonwebtoken'
 import User from '../models/User'
+
+require('dotenv').config()
 
 class LoginController{
   async store(req, res){
@@ -27,7 +30,8 @@ class LoginController{
         id: userExiste._id,
         name: userExiste.name,
         email
-      }
+      },
+      token: jwt.sign({id: userExiste._id}, process.env.SECRET, {expiresIn: process.env.EXPIRES_IN})
     })
   }
 }
