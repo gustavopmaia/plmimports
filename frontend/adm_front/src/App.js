@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import MyRoutes from './routes'
+import MyRoutes from './routes/routes';
 
 function App() {
-  return <MyRoutes />
+  return <MyRoutes />;
 }
 
 export default App;
