@@ -15,6 +15,14 @@ const User = new mongoose.Schema(
       type: String,
       required: true,
     },
+    originalName: {
+      type: String,
+      required: true
+    },
+    fileName: {
+      type: String,
+      required: true 
+    }
   },
   {
     timestamps: true,

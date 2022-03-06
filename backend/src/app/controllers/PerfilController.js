@@ -6,12 +6,14 @@ class PerfilController {
   async show(req, res) {
     await User.findOne(
       { _id: req.userId },
-      '_id name email createdAt updatedAt'
+      '_id name email createdAt updatedAt fileName'
     )
       .then((user) => {
+        var url = process.env.URL + "/files/users/" + user.fileName
         return res.json({
           error: false,
           user,
+          url,
         });
       })
       .catch((err) => {
