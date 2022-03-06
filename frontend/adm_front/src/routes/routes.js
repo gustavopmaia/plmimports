@@ -12,7 +12,7 @@ export default function MyRoutes() {
     <BrowserRouter history={history}>
       <Routes>
         <Route path='/' exact element={<Login />} />
-        <PrivateRoute path='/dashboard' element={<Dashboard />} />
+        <Route path='/dashboard' element={<PrivateRoute> <Dashboard /> </PrivateRoute>} />
       </Routes>
     </BrowserRouter>
   );
