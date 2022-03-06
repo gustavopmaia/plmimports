@@ -1,11 +1,9 @@
 import React from 'react'
 
+import MyRoutes from './routes'
+
 function App() {
-  return (
-    <div className="App">
-      <h1>PLM Imports</h1>
-    </div>
-  );
+  return <MyRoutes />
 }
 
 export default App;
