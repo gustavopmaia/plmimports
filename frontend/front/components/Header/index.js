@@ -1,29 +1,52 @@
 import React from 'react';
-import { Navbar, NavbarBrand, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+} from 'reactstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Header() {
-  return (
-    <>
-      <Navbar color='light' expand='md' light>
-        <NavbarBrand href='/'>
-          <img width={130} src='LogoPLM.png' />
-        </NavbarBrand>
-        <NavbarToggler onClick={function noRefCheck() {}} />
-        <Nav classNameName='me-auto' navbar>
-          <NavItem>
-            <NavLink href='/'>Catalogo</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink target='_blank' href='about:blank'>
-              Whatsapp
-            </NavLink>
-          </NavItem>
-        </Nav>
-      </Navbar>
-    </>
-  );
-}
+import Image from 'next/image';
 
-export default Header
+export default class Header extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false,
+    };
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    });
+  }
+  render() {
+    return (
+      <div>
+        <Navbar color='light' light expand='md'>
+          <NavbarBrand href='/'><Image src='/LogoPLM.png' width={130} height={65} /></NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className='ml-auto' navbar>
+              <NavItem>
+                <NavLink href='/'>Catalogo</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href='https://github.com/reactstrap/reactstrap'>
+                  Whatsapp
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    );
+  }
+}
