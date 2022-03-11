@@ -11,7 +11,7 @@ function Header() {
           <img width={130} src='LogoPLM.png' />
         </NavbarBrand>
         <NavbarToggler onClick={function noRefCheck() {}} />
-        <Nav className='me-auto' navbar>
+        <Nav classNameName='me-auto' navbar>
           <NavItem>
             <NavLink href='/'>Catalogo</NavLink>
           </NavItem>
