@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Heroe from '../components/Heroe';
 import Footer from '../components/Footer';
 import Prices from '../components/Prices';
+import Sizes from '../components/Sizes'
 
 import Head from 'next/head';
 
@@ -21,6 +22,7 @@ function Home(props) {
       <Header />
       <Heroe />
       <Prices />
+      <Sizes />
       <Footer />
     </>
   );

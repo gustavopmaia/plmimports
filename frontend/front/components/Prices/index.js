@@ -16,10 +16,10 @@ function Prices(props) {
                   R$149,99
                 </h1>
                 <ul className='list-unstyled mt-3 mb-4'>
-                  <li>- Lorem ipsum</li>
-                  <li>- Lorem ipsum</li>
-                  <li>- Lorem ipsum</li>
-                  <li>- Lorem ipsum</li>
+                  <li>- 📍|Tailandesas 1:1 - Idênticas as originais </li>
+                  <li>- 👕|Camisa Torcedor</li>
+                  <li>- 🔝|Tamanhos de P ao XXL </li>
+                  <li>- 📭|Entregas em todo Brasil</li>
                 </ul>
                 <button type='button' className='w-100 btn btn-lg btn-primary'>
                   Compre agora
@@ -37,10 +37,10 @@ function Prices(props) {
                   R$249,99
                 </h1>
                 <ul className='list-unstyled mt-3 mb-4'>
-                  <li>- Lorem ipsum</li>
-                  <li>- Lorem ipsum</li>
-                  <li>- Lorem ipsum</li>
-                  <li>- Lorem ipsum</li>
+                  <li>- 📍|Tailandesas 1:1 - Idênticas as originais</li>
+                  <li>- 🎽|Regata NBA</li>
+                  <li>- 🔝|Tamanhos de P ao XXL </li>
+                  <li>- 📭|Entregas em todo Brasil</li>
                 </ul>
                 <button type='button' className='w-100 btn btn-lg btn-primary'>
                   Compre agora
@@ -58,10 +58,10 @@ function Prices(props) {
                   R$249,99
                 </h1>
                 <ul className='list-unstyled mt-3 mb-4'>
-                  <li>- Lorem ipsum</li>
-                  <li>- Lorem ipsum</li>
-                  <li>- Lorem ipsum</li>
-                  <li>- Lorem ipsum</li>
+                  <li>- 📍|Tailandes 1:1 - Idênticos aos originais</li>
+                  <li>- 🥶|Corta vento </li>
+                  <li>- 🔝|Tamanhos de P ao XXL </li>
+                  <li>- 📭|Entregas em todo Brasil</li>
                 </ul>
                 <button type='button' className='w-100 btn btn-lg btn-primary'>
                   Compre agora
