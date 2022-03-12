@@ -39,7 +39,7 @@ export default class Header extends React.Component {
                 <NavLink href='/'>Catalogo</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href='https://github.com/reactstrap/reactstrap'>
+                <NavLink target="_blank" href='https://api.whatsapp.com/send/?phone=5511981476124&text&app_absent=0'>
                   Whatsapp
                 </NavLink>
               </NavItem>
