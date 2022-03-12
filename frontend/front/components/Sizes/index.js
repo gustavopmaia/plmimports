@@ -135,8 +135,6 @@ function Sizes(props) {
             71cm
           </Col>
         </Row>
-
-        <h2 className='text-center p-3'>Tamanho Infantil</h2>
       </Container>
     </>
   );
