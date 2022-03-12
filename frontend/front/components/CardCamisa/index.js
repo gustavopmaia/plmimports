@@ -13,7 +13,7 @@ function CardCamisa(props) {
         </div>
         <div className='card-footer'>
           <Link target="_blank" href='https://api.whatsapp.com/send/?phone=5511981476124&text&app_absent=0'>
-            <a className='btn btn-primary'>
+            <a target="_blank" className='btn btn-primary'>
               Compre agora
             </a>
           </Link>
