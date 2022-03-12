@@ -11,7 +11,7 @@ function Home(props) {
   return (
     <>
       <Head>
-        <meta charset='UTF-8' />
+        <meta charSet='UTF-8' />
         <title>Home - PLM Imports</title>
         <meta name='keywords' content='loja,plm,plimports,plmimports,importsplm,importspl,camisa,time,camisatime,timecamisa,lojacamisatime,timecamisaloja,lojacamisa,timeloja' />
         <meta name='author' content='Syamlal CM' />

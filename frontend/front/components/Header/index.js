@@ -7,6 +7,10 @@ import {
   Nav,
   NavItem,
   NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownItem,
+  DropdownMenu
 } from 'reactstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -31,15 +35,27 @@ export default class Header extends React.Component {
     return (
       <div>
         <Navbar color='light' light expand='md'>
-          <NavbarBrand href='/'><Image src='/LogoPLM.png' width={130} height={65} /></NavbarBrand>
+          <NavbarBrand href='/'>
+            <Image src='/LogoPLM.png' width={130} height={65} />
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className='ml-auto' navbar>
+              <UncontrolledDropdown inNavbar nav>
+                <DropdownToggle caret nav>
+                  Catalogo
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem href="/catalogo/masculinas">Masculinas</DropdownItem>
+                  <DropdownItem href="/catalogo/infantis">Infantis</DropdownItem>
+                  <DropdownItem href="/catalogo/femininas">Femininas</DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
               <NavItem>
-                <NavLink href='/catalogo'>Catalogo</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink target="_blank" href='https://api.whatsapp.com/send/?phone=5511981476124&text&app_absent=0'>
+                <NavLink
+                  target='_blank'
+                  href='https://api.whatsapp.com/send/?phone=5511981476124&text&app_absent=0'
+                >
                   Whatsapp
                 </NavLink>
               </NavItem>
