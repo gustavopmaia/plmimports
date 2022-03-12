@@ -36,7 +36,7 @@ export default class Header extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className='ml-auto' navbar>
               <NavItem>
-                <NavLink href='/'>Catalogo</NavLink>
+                <NavLink href='/catalogo'>Catalogo</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink target="_blank" href='https://api.whatsapp.com/send/?phone=5511981476124&text&app_absent=0'>

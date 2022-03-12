@@ -4,9 +4,16 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import CardCamisa from '../../components/CardCamisa';
 
+import Head from 'next/head';
+
 function Catalogo(props) {
   return (
     <>
+
+      <Head>
+        <title>Catalogo - PLM Imports</title>
+      </Head>
+
       <Header />
       <div className='row row-cols-1 row-cols-md-3 mb-3 m-5 text-center'>
         <div className='col'>

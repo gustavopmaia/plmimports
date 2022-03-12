@@ -2,6 +2,7 @@ import React from 'react'
 import {} from 'reactstrap'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Heroe(props){
   return(
@@ -15,8 +16,12 @@ function Heroe(props){
             <h1 className="display-5 fw-bold lh-1 mb-3">PLM Imports</h1>
             <p className="lead">Temos camisetas com qualidade excelentes, venha comprar agora!</p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Compre agora</button>
-              <button type="button" className="btn btn-outline-secondary btn-lg px-4">Catalogo</button>
+              <Link target="_blank" href="https://api.whatsapp.com/send/?phone=5511981476124&text&app_absent=0">
+                <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Compre agora</button>
+              </Link>
+              <Link href="/catalogo">
+                <button type="button" className="btn btn-outline-secondary btn-lg px-4">Catalogo</button>
+              </Link>
             </div>
           </div>
         </div>
