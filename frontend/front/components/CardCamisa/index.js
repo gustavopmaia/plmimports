@@ -7,7 +7,9 @@ function CardCamisa(props) {
   return (
     <>
       <div className='card'>
-        <Image src={props.src} alt='Camisa' className='card-img-top' layout='responsive' width={280} height={280} />
+        <div className='img-wrapper'>
+          <Image src={props.src} alt='Camisa' className='card-img-top hover-zoom' layout='responsive' width={280} height={280} />
+        </div>
         <div className='card-body'>
           <h5 className='card-title'>{props.children}</h5>
         </div>

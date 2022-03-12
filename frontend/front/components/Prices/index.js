@@ -1,7 +1,8 @@
 import React from 'react';
 
-function Prices(props) {
+import Link from 'next/link';
 
+function Prices(props) {
   return (
     <>
       <main>
@@ -12,18 +13,18 @@ function Prices(props) {
                 <h4 className='my-0 fw-normal'>Camisa Torcedor</h4>
               </div>
               <div className='card-body'>
-                <h1 className='card-title pricing-card-title'>
-                  R$149,99
-                </h1>
+                <h1 className='card-title pricing-card-title'>R$149,99</h1>
                 <ul className='list-unstyled mt-3 mb-4'>
                   <li>- 📍|Tailandesas 1:1 - Idênticas as originais </li>
                   <li>- 👕|Camisa Torcedor</li>
                   <li>- 🔝|Tamanhos de P ao XXL </li>
                   <li>- 📭|Entregas em todo Brasil</li>
                 </ul>
-                <button type='button' className='w-100 btn btn-lg btn-primary'>
-                  Compre agora
-                </button>
+                <Link target='_blank' href="https://api.whatsapp.com/send/?phone=5511981476124&text&app_absent=0">
+                  <button type='button'className='w-100 btn btn-lg btn-primary'>
+                    Compre agora
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -33,39 +34,39 @@ function Prices(props) {
                 <h4 className='my-0 fw-normal'>Camisa Regata Basquete</h4>
               </div>
               <div className='card-body'>
-                <h1 className='card-title pricing-card-title'>
-                  R$249,99
-                </h1>
+                <h1 className='card-title pricing-card-title'>R$249,99</h1>
                 <ul className='list-unstyled mt-3 mb-4'>
                   <li>- 📍|Tailandesas 1:1 - Idênticas as originais</li>
                   <li>- 🎽|Regata NBA</li>
                   <li>- 🔝|Tamanhos de P ao XXL </li>
                   <li>- 📭|Entregas em todo Brasil</li>
                 </ul>
-                <button type='button' className='w-100 btn btn-lg btn-primary'>
-                  Compre agora
-                </button>
+                <Link target='_blank' href="https://api.whatsapp.com/send/?phone=5511981476124&text&app_absent=0">
+                  <button type='button'className='w-100 btn btn-lg btn-primary'>
+                    Compre agora
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
           <div className='col'>
             <div className='card mb-4 rounded-3 shadow-sm'>
-            <div className='card-header py-3'>
+              <div className='card-header py-3'>
                 <h4 className='my-0 fw-normal'>Corta Vento</h4>
               </div>
               <div className='card-body'>
-                <h1 className='card-title pricing-card-title'>
-                  R$249,99
-                </h1>
+                <h1 className='card-title pricing-card-title'>R$249,99</h1>
                 <ul className='list-unstyled mt-3 mb-4'>
                   <li>- 📍|Tailandes 1:1 - Idênticos aos originais</li>
                   <li>- 🥶|Corta vento </li>
                   <li>- 🔝|Tamanhos de P ao XXL </li>
                   <li>- 📭|Entregas em todo Brasil</li>
                 </ul>
-                <button type='button' className='w-100 btn btn-lg btn-primary'>
-                  Compre agora
-                </button>
+                <Link target='_blank' href="https://api.whatsapp.com/send/?phone=5511981476124&text&app_absent=0">
+                  <button type='button'className='w-100 btn btn-lg btn-primary'>
+                    Compre agora
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
