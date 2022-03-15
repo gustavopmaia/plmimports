@@ -19,7 +19,7 @@ function Heroe(props){
               <Link target="_blank" href="https://api.whatsapp.com/send/?phone=5511981476124&text&app_absent=0">
                 <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Compre agora</button>
               </Link>
-              <Link href="/catalogo">
+              <Link href="/catalogo/masculinas">
                 <button type="button" className="btn btn-outline-secondary btn-lg px-4">Catalogo</button>
               </Link>
             </div>

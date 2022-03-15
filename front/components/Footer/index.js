@@ -25,7 +25,7 @@ function Footer(props) {
               </Link>
             </li>
             <li className='nav-item'>
-              <Link href='#'>
+              <Link href='/catalogo/masculinas'>
                 <a className='nav-link px-2 text-muted'>
                   Catalogo
                 </a>
