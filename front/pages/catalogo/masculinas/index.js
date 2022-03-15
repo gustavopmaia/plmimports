@@ -59,7 +59,7 @@ function Catalogo(props) {
         </div>
         <div className='col'>
           <div className='card mb-4 rounded-3 shadow-sm'>
-          <CardCamisa src="/Camisas/Atlético Mineiro 21_22.jpg">Atlético Mineiro 21/22</CardCamisa>
+          <CardCamisa src="/Camisas/Atletico Mineiro 21_22.jpg">Atlético Mineiro 21/22</CardCamisa>
           </div>
         </div>
         <div className='col'>
@@ -239,12 +239,12 @@ function Catalogo(props) {
         </div>
         <div className='col'>
           <div className='card mb-4 rounded-3 shadow-sm'>
-          <CardCamisa src="/Camisas/São Paulo 21_22.jpg">São Paulo 21/22</CardCamisa>
+          <CardCamisa src="/Camisas/Sao Paulo 21_22.jpg">São Paulo 21/22</CardCamisa>
           </div>
         </div>
         <div className='col'>
           <div className='card mb-4 rounded-3 shadow-sm'>
-            <CardCamisa src="/Camisas/São Paulo 21_22.png">São Paulo 21/22</CardCamisa>
+            <CardCamisa src="/Camisas/Sao Paulo 21_22.png">São Paulo 21/22</CardCamisa>
           </div>
         </div>
       </div>

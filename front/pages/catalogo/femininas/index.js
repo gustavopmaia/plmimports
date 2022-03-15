@@ -51,7 +51,7 @@ function Infantis(props) {
         </div>
         <div className='col'>
           <div className='card mb-4 rounded-3 shadow-sm'>
-            <CardCamisa src='/Feminina/Grêmio Feminina.jpg'>
+            <CardCamisa src='/Feminina/Gremio Feminina.jpg'>
               Grêmio Feminina
             </CardCamisa>
           </div>
@@ -88,14 +88,14 @@ function Infantis(props) {
         </div>
         <div className='col'>
           <div className='card mb-4 rounded-3 shadow-sm'>
-            <CardCamisa src='/Feminina/São Paulo Feminina (1).jpg'>
+            <CardCamisa src='/Feminina/Sao Paulo Feminina (1).jpg'>
               São Paulo Feminina
             </CardCamisa>
           </div>
         </div>
         <div className='col'>
           <div className='card mb-4 rounded-3 shadow-sm'>
-            <CardCamisa src='/Feminina/São Paulo Feminina.jpg'>
+            <CardCamisa src='/Feminina/Sao Paulo Feminina.jpg'>
               São Paulo Feminina
             </CardCamisa>
           </div>
