@@ -49,6 +49,8 @@ export default class Header extends React.Component {
                   <DropdownItem href="/catalogo/masculinas">Masculinas</DropdownItem>
                   <DropdownItem href="/catalogo/infantis">Infantis</DropdownItem>
                   <DropdownItem href="/catalogo/femininas">Femininas</DropdownItem>
+                  <DropdownItem href="/catalogo/nba">NBA</DropdownItem>
+                  <DropdownItem href="/catalogo/corta-vento">Corta vento</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>

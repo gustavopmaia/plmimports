@@ -15,12 +15,12 @@ function Prices(props) {
               <div className='card-body'>
                 <h1 className='card-title pricing-card-title'>R$149,99</h1>
                 <ul className='list-unstyled mt-3 mb-4'>
-                  <li>- 📍|Tailandesas 1:1 - Idênticas as originais </li>
-                  <li>- 👕|Camisa Torcedor</li>
-                  <li>- 🔝|Tamanhos de P ao XXL </li>
-                  <li>- 📭|Entregas em todo Brasil</li>
+                  <li>- Tailandesas 1:1 - Idênticas as originais </li>
+                  <li>- Camisa Torcedor</li>
+                  <li>- Tamanhos de P ao XXL </li>
+                  <li>- Entregas em todo Brasil</li>
                 </ul>
-                <Link target='_blank' href="https://api.whatsapp.com/send/?phone=5511981476124&text&app_absent=0">
+                <Link target='_blank' href="/catalogo/masculinas">
                   <button type='button'className='w-100 btn btn-lg btn-primary'>
                     Compre agora
                   </button>
@@ -36,12 +36,12 @@ function Prices(props) {
               <div className='card-body'>
                 <h1 className='card-title pricing-card-title'>R$249,99</h1>
                 <ul className='list-unstyled mt-3 mb-4'>
-                  <li>- 📍|Tailandesas 1:1 - Idênticas as originais</li>
-                  <li>- 🎽|Regata NBA</li>
-                  <li>- 🔝|Tamanhos de P ao XXL </li>
-                  <li>- 📭|Entregas em todo Brasil</li>
+                  <li>- Tailandesas 1:1 - Idênticas as originais</li>
+                  <li>- Regata NBA</li>
+                  <li>- Tamanhos de P ao XXL </li>
+                  <li>- Entregas em todo Brasil</li>
                 </ul>
-                <Link target='_blank' href="https://api.whatsapp.com/send/?phone=5511981476124&text&app_absent=0">
+                <Link target='_blank' href="/catalogo/nba">
                   <button type='button'className='w-100 btn btn-lg btn-primary'>
                     Compre agora
                   </button>
@@ -57,12 +57,12 @@ function Prices(props) {
               <div className='card-body'>
                 <h1 className='card-title pricing-card-title'>R$249,99</h1>
                 <ul className='list-unstyled mt-3 mb-4'>
-                  <li>- 📍|Tailandes 1:1 - Idênticos aos originais</li>
-                  <li>- 🥶|Corta vento </li>
-                  <li>- 🔝|Tamanhos de P ao XXL </li>
-                  <li>- 📭|Entregas em todo Brasil</li>
+                  <li>- Tailandes 1:1 - Idênticos aos originais</li>
+                  <li>- Corta vento </li>
+                  <li>- Tamanhos de P ao XXL </li>
+                  <li>- Entregas em todo Brasil</li>
                 </ul>
-                <Link target='_blank' href="https://api.whatsapp.com/send/?phone=5511981476124&text&app_absent=0">
+                <Link target='_blank' href="/catalogo/corta-vento">
                   <button type='button'className='w-100 btn btn-lg btn-primary'>
                     Compre agora
                   </button>
