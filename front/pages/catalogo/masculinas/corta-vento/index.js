@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Header from '../../../components/Header';
-import Footer from '../../../components/Footer';
-import CardCamisa from '../../../components/CardCamisa';
+import Header from '../../../../components/Header';
+import Footer from '../../../../components/Footer';
+import CardCamisa from '../../../../components/CardCamisa';
 
 import Head from 'next/head';
 

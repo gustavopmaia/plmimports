@@ -6,7 +6,7 @@ import CardCamisa from '../../../components/CardCamisa';
 
 import Head from 'next/head';
 
-function Infantis(props) {
+function FemNac(props) {
   return (
     <>
       <Head>
@@ -107,4 +107,4 @@ function Infantis(props) {
   );
 }
 
-export default Infantis
+export default FemNac

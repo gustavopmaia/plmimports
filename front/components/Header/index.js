@@ -43,16 +43,32 @@ export default class Header extends React.Component {
             <Nav className='ml-auto' navbar>
               <UncontrolledDropdown inNavbar nav>
                 <DropdownToggle caret nav>
-                  Catalogo
+                  Masculinas
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem href="/catalogo/masculinas">Masculinas</DropdownItem>
-                  <DropdownItem href="/catalogo/infantis">Infantis</DropdownItem>
-                  <DropdownItem href="/catalogo/femininas">Femininas</DropdownItem>
-                  <DropdownItem href="/catalogo/nba">NBA</DropdownItem>
-                  <DropdownItem href="/catalogo/corta-vento">Corta vento</DropdownItem>
+                  <DropdownItem href="/catalogo/masculinas/internacionais">Internacionais</DropdownItem>
+                  <DropdownItem href="/catalogo/masculinas/nacionais">Nacionais</DropdownItem>
+                  <DropdownItem href="/catalogo/masculinas/nba">NBA</DropdownItem>
+                  <DropdownItem href="/catalogo/masculinas/corta-vento">Corta vento</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+
+              <NavItem>
+                <NavLink
+                  href='/catalogo/femininas'
+                >
+                  Femininas
+                </NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink
+                  href='/catalogo/infantis'
+                >
+                  Infantis
+                </NavLink>
+              </NavItem>
+              
               <NavItem>
                 <NavLink
                   target='_blank'
