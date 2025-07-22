@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install dependencies
-        run: npm ci
+        run: npm i
 
       - name: Build app
         run: npm run build  # ou next build, se não tiver script customizado
